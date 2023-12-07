@@ -20,8 +20,8 @@ En observant les distances obtenues, que pouvez-vous dire des espèces présente
 On precise que ici on mesure une similarité avec l'indice de jaccard, la notion de distance n'est pas vraiment existante (il suffit juste de faire 1 - similarité pour retrouver la distance de Jaccard).
 
             Seq1        Seq2       Seq3      Seq4        Seq5
-Seq1  0.         0.01360741 0.01580614 0.00967742 0.01246676
-Seq2  0.         0.         0.67850894 0.02501316 0.02772614
+Seq1  [[0.         0.01360741 0.01580614 0.00967742 0.01246676]
+Seq2  [0.         0.         0.67850894 0.02501316 0.02772614]
 Seq3  [0.         0.         0.         0.02432211 0.02700035]
 Seq4  [0.         0.         0.         0.         0.96858637]
 Seq5  [0.         0.         0.         0.         0.        ]]

@@ -1,5 +1,7 @@
 from os import listdir, path
+import time
 
+start = time.time()
 
 def load_fna(filename):
     """ Loads a fasta formated file into a list of sequences.
@@ -16,13 +18,11 @@ def load_fna(filename):
                     texts.append("".join(txt))
                 txt = []
             else:
-                txt.append(line.strip())
-
+                txt.append(line.strip())          
     if len(txt) > 0:
         texts.append("".join(txt))
-    return texts
-
-
+    cleaned_texts = [''.join([char for char in seq if char in 'ACGT']) for seq in texts]    
+    return cleaned_texts
 
 def load_directory(directory):
     """ Loads all the fasta files from a directory
@@ -38,5 +38,8 @@ def load_directory(directory):
 
 
 if __name__ == "__main__":
-    files = load_directory("data")
+    files = load_directory("ata")
     print(len(files))
+
+
+print(time.time() - start)
